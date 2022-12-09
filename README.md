@@ -98,3 +98,9 @@ Delete the connectors
 ```
 $ curl -i -X DELETE http://localhost:8083/connectors/mongodb-sink
 ```
+
+If you have a dedicated Nginx with a static IP, you can instead use:
+```
+extra_hosts:
+     - "${CCLOUD_BOOTSTRAP_SERVER_NO_PORT}:10.128.0.100"
+```
